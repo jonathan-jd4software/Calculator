@@ -11,7 +11,7 @@ namespace Calculator
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainCalculatorPage();
         }
 
         protected override void OnStart()

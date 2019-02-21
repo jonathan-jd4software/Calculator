@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainCalculatorPage">
+
+    <RelativeLayout
+        BackgroundColor="Black"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+        <Grid
+            Margin="1"
+            BackgroundColor="White"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="60" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" HorizontalTextAlignment="End" Style="{StaticResource labelCalculatorResultStyle}"
+               Text="{Binding CalculatorEntry}"/>
+
+            <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Text="A/C" Style="{StaticResource buttonFunctionStyle}"
+                Command="{Binding ClearCommand}"/>
+
+            <Button Grid.Column="3" Grid.Row="1" Text="/" Style="{StaticResource buttonMathsFunctionStyle}"
+                Command="{Binding DivideCommand}"/>
+
+
+            <Button Grid.Column="0" Grid.Row="2" Text="7" Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="7"/>
+
+            <Button Grid.Column="1" Grid.Row="2" Text="8" Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="8"/>
+
+            <Button Grid.Column="2" Grid.Row="2" Text="9" Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="9"/>
+
+            <Button Grid.Column="3" Grid.Row="2" Text="*" Style="{StaticResource buttonMathsFunctionStyle}"
+                Command="{Binding MultiplyCommand}"/>
+
+
+            <Button Grid.Column="0" Grid.Row="3" Text="4" Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="4" />
+
+            <Button Grid.Column="1" Grid.Row="3" Text="5" Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="5" />
+
+            <Button Grid.Column="2" Grid.Row="3" Text="6" Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="6" />
+
+            <Button Grid.Column="3" Grid.Row="3" Text="-" Style="{StaticResource buttonMathsFunctionStyle}"
+                Command="{Binding SubtractCommand}"/>
+
+
+            <Button Grid.Column="0" Grid.Row="4" Text="1"  Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="1" />
+
+            <Button Grid.Column="1" Grid.Row="4" Text="2" Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="2" />
+
+            <Button Grid.Column="2" Grid.Row="4" Text="3" Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="3" />
+
+            <Button Grid.Column="3" Grid.Row="4" Text="+" Style="{StaticResource buttonMathsFunctionStyle}"
+                Command="{Binding PlusCommand}"/>
+
+
+            <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Text="0" Style="{StaticResource buttonNumericStyle}"
+                Command="{Binding NumericEntryCommand}" CommandParameter="0" />
+
+            <Button Grid.Column="2" Grid.Row="5" Text="." Style="{StaticResource buttonNumericStyle}" 
+                Command="{Binding DecimalCommand}" />
+
+            <Button Grid.Column="3" Grid.Row="5" Text="=" Style="{StaticResource buttonMathsFunctionStyle}"
+                Command="{Binding EqualsCommand}"/>
+
+
+        </Grid>
+    </RelativeLayout>
+</ContentPage>
